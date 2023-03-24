@@ -40,11 +40,12 @@ Your output should emulate the included animated gif:
 If you were to use third-party tools to complete this challenge, what would you use? Write a sentence or two describing your reasoning
 
 Answer:
-- I think I can use the slick JS slider plugin for this (https://kenwheeler.github.io/slick/). I'll just set the config to:
+- For carousels/slider like this, it is much easier using Slick JS plugin (https://kenwheeler.github.io/slick/). Slick JS will treat each image as a slides and I will just need to adjust the configuration to comply with the speed and also to infinitely show each images like this:
 $('.single-item').slick({
     infinite: true,
     speed: 1000,
 });
+
 
 ## Guidelines
 
