@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carousel</title>
+        <style>
+            .carousel img {
+                display: none;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>My Carousel</h1>
+        <div class="carousel">
+            <img alt="First" src="./img/1.jpg" />
+            <img alt="Second" src="./img/2.jpg" />
+            <img alt="Third" src="./img/3.jpg" />
+            <img alt="Fourth" src="./img/4.jpg" />
+            <img alt="Fifth" src="./img/5.jpg" />
+        </div>
+        <script>
+          
+            var carouselImages = document.querySelectorAll('.carousel img');
+            var currentImageIndex = 0;
+
+            const nextCarouselImage = () => {
+                // Hides the current image
+                carouselImages[currentImageIndex].style.display = 'none';
+                // increments the index based on the total of images
+                currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+                // Shows the next image based on the incremented given index above
+                carouselImages[currentImageIndex].style.display = 'block';
+            }
+            // Shows the 1st image
+            carouselImages[0].style.display = 'block';
+
+            // Displays the image for 1 second
+            setInterval(nextCarouselImage, 1000);
+        </script>
+    </body>
+</html>

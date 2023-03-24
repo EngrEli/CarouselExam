@@ -37,7 +37,14 @@ Your output should emulate the included animated gif:
 
 ### Bonus
 
-If you were to use third-party tools to complete this challenge, what would you use? Write a sentence or two describing your reasoning.
+If you were to use third-party tools to complete this challenge, what would you use? Write a sentence or two describing your reasoning
+
+Answer:
+- I think I can use the slick JS slider plugin for this (https://kenwheeler.github.io/slick/). I'll just set the config to:
+$('.single-item').slick({
+    infinite: true,
+    speed: 1000,
+});
 
 ## Guidelines
 
